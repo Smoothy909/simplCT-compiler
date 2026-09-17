@@ -1,0 +1,11 @@
+let a = 48;
+let b = 36;
+while (a != b) {
+    if (a > b) {
+        a = a - b;
+    }
+    if (b > a) {
+        b = b - a;
+    }
+}
+print("GCD(48, 36) =", a);

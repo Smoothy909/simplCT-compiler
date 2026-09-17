@@ -1,0 +1,12 @@
+let score = 0;
+let level = 1;
+print("Welcome to the game!");
+while (score < 100) {
+    print("Current score: ", score);
+    score = score + 10;
+    if (score >= 50) {
+        level = level + 1;
+        print("Level up! Now at level ", level);
+    }
+}
+print("Game over! Final score: ", score);

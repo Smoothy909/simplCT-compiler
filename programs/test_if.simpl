@@ -1,0 +1,6 @@
+let a = 10;
+let b = 20;
+if (a < b) {
+    print(100);
+}
+print(999);

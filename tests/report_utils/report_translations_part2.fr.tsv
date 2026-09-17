@@ -1,0 +1,183 @@
+compile_primary.int_literal	case	integer literal	littéral entier
+compile_primary.int_literal	check	compile_primary(42): opcode == OP_PUSH, operand == 42	compile_primary(42) : opcode == OP_PUSH, opérande == 42
+compile_primary.int_literal	hint	An integer literal must emit exactly one OP_PUSH instruction with the integer value as operand.	Un littéral entier doit émettre exactement une instruction OP_PUSH avec la valeur entière comme opérande.
+compile_primary.int_zero	case	integer zero	littéral entier zéro
+compile_primary.int_zero	check	compile_primary(0): opcode == OP_PUSH, operand == 0	compile_primary(0) : opcode == OP_PUSH, opérande == 0
+compile_primary.int_zero	hint	Zero is a valid integer literal; emit OP_PUSH with operand 0.	Zéro est un littéral entier valide ; émettre OP_PUSH avec opérande 0.
+compile_primary.string_literal	case	string literal	littéral chaîne
+compile_primary.string_literal	check	compile_primary("hello"): opcode == OP_PUSH_STR, operand_str == "hello"	compile_primary("hello") : opcode == OP_PUSH_STR, operand_str == "hello"
+compile_primary.string_literal	hint	A string literal must emit OP_PUSH_STR with the lexeme as operand_str.	Un littéral chaîne doit émettre OP_PUSH_STR avec le lexème comme operand_str.
+compile_primary.identifier	case	identifier	identifiant
+compile_primary.identifier	check	compile_primary(x): opcode == OP_LOAD_VAR, operand_str == "x"	compile_primary(x) : opcode == OP_LOAD_VAR, operand_str == "x"
+compile_primary.identifier	hint	An identifier must emit OP_LOAD_VAR with the variable name as operand_str.	Un identifiant doit émettre OP_LOAD_VAR avec le nom de variable comme operand_str.
+compile_primary.parenthesized_expression	case	parenthesized expression	expression entre parenthèses
+compile_primary.parenthesized_expression	check	compile_primary((7)): opcode == OP_PUSH, operand == 7	compile_primary((7)) : opcode == OP_PUSH, opérande == 7
+compile_primary.parenthesized_expression	hint	Parentheses must not add extra instructions; compile the inner expression normally.	Les parenthèses ne doivent pas ajouter d'instructions supplémentaires ; compiler l'expression interne normalement.
+compile_primary.advances_current_token	case	advances current token	avance le token courant
+compile_primary.advances_current_token	check	compile_primary(5): c.current == TOKEN_EOF after call	compile_primary(5) : c.current == TOKEN_EOF après l'appel
+compile_primary.advances_current_token	hint	compile_primary must consume the token by advancing c.current past it.	compile_primary doit consommer le token en avançant c.current au-delà.
+compile_primary.no_error_on_valid_input	case	no error on valid input	pas d'erreur sur entrée valide
+compile_primary.no_error_on_valid_input	check	compile_primary(1): had_error == 0	compile_primary(1) : had_error == 0
+compile_primary.no_error_on_valid_input	hint	compile_primary must not set had_error on valid input.	compile_primary ne doit pas activer had_error sur une entrée valide.
+compile_factor.single_primary	case	single primary	primaire seul
+compile_factor.single_primary	check	compile_factor(3): 1 instruction, opcode[0] == OP_PUSH	compile_factor(3) : 1 instruction, opcode[0] == OP_PUSH
+compile_factor.single_primary	hint	With no * or / operator, compile_factor must emit exactly the instructions from compile_primary.	Sans opérateur * ou /, compile_factor doit émettre exactement les instructions de compile_primary.
+compile_factor.multiplication	case	multiplication	multiplication
+compile_factor.multiplication	check	compile_factor(3*4): 3 instructions, opcode[2] == OP_MUL	compile_factor(3*4) : 3 instructions, opcode[2] == OP_MUL
+compile_factor.multiplication	hint	a * b must emit: PUSH a, PUSH b, OP_MUL.	a * b doit émettre : PUSH a, PUSH b, OP_MUL.
+compile_factor.division	case	division	division
+compile_factor.division	check	compile_factor(6/2): 3 instructions, opcode[2] == OP_DIV	compile_factor(6/2) : 3 instructions, opcode[2] == OP_DIV
+compile_factor.division	hint	a / b must emit: PUSH a, PUSH b, OP_DIV.	a / b doit émettre : PUSH a, PUSH b, OP_DIV.
+compile_factor.left_associativity	case	left associativity	associativité gauche
+compile_factor.left_associativity	check	compile_factor(2*3*4): 5 instructions, opcode[2]==OP_MUL, opcode[4]==OP_MUL	compile_factor(2*3*4) : 5 instructions, opcode[2]==OP_MUL, opcode[4]==OP_MUL
+compile_factor.left_associativity	hint	a*b*c is left-associative: emit PUSH a, PUSH b, MUL, PUSH c, MUL.	a*b*c a une associativité gauche : émettre PUSH a, PUSH b, MUL, PUSH c, MUL.
+compile_factor.no_error_on_valid_input	case	no error on valid input	pas d'erreur sur entrée valide
+compile_factor.no_error_on_valid_input	check	compile_factor(2*3): had_error == 0	compile_factor(2*3) : had_error == 0
+compile_factor.no_error_on_valid_input	hint	compile_factor must not set had_error on valid input.	compile_factor ne doit pas activer had_error sur une entrée valide.
+compile_term.addition	case	addition	addition
+compile_term.addition	check	compile_term(3+4): 3 instructions, opcode[2] == OP_ADD	compile_term(3+4) : 3 instructions, opcode[2] == OP_ADD
+compile_term.addition	hint	a + b must emit: PUSH a, PUSH b, OP_ADD.	a + b doit émettre : PUSH a, PUSH b, OP_ADD.
+compile_term.subtraction	case	subtraction	soustraction
+compile_term.subtraction	check	compile_term(5-2): 3 instructions, opcode[2] == OP_SUB	compile_term(5-2) : 3 instructions, opcode[2] == OP_SUB
+compile_term.subtraction	hint	a - b must emit: PUSH a, PUSH b, OP_SUB.	a - b doit émettre : PUSH a, PUSH b, OP_SUB.
+compile_term.precedence_mult_over_add	case	precedence: * over +	précédence : * sur +
+compile_term.precedence_mult_over_add	check	compile_term(2+3*4): opcode[3]==OP_MUL, opcode[4]==OP_ADD	compile_term(2+3*4) : opcode[3]==OP_MUL, opcode[4]==OP_ADD
+compile_term.precedence_mult_over_add	hint	* has higher precedence than +: compile the factor before emitting OP_ADD.	* a une priorité plus haute que + : compiler le facteur avant d'émettre OP_ADD.
+compile_term.left_associativity	case	left associativity	associativité gauche
+compile_term.left_associativity	check	compile_term(1+2+3): 5 instructions, opcode[2]==OP_ADD, opcode[4]==OP_ADD	compile_term(1+2+3) : 5 instructions, opcode[2]==OP_ADD, opcode[4]==OP_ADD
+compile_term.left_associativity	hint	1+2+3 is left-associative: emit PUSH 1, PUSH 2, ADD, PUSH 3, ADD.	1+2+3 a une associativité gauche : émettre PUSH 1, PUSH 2, ADD, PUSH 3, ADD.
+compile_term.single_factor	case	single factor	facteur seul
+compile_term.single_factor	check	compile_term(9): 1 instruction emitted	compile_term(9) : 1 instruction émise
+compile_term.single_factor	hint	With no + or - operator, compile_term must emit exactly the instructions from compile_factor.	Sans opérateur + ou -, compile_term doit émettre exactement les instructions de compile_factor.
+compile_comparison.less_than	case	less than	inférieur strict
+compile_comparison.less_than	check	compile_comparison(a<b): opcode[2] == OP_LT	compile_comparison(a<b) : opcode[2] == OP_LT
+compile_comparison.less_than	hint	< must emit both operand expressions then OP_LT.	< doit émettre les deux expressions opérandes puis OP_LT.
+compile_comparison.greater_than	case	greater than	supérieur strict
+compile_comparison.greater_than	check	compile_comparison(a>b): opcode[2] == OP_GT	compile_comparison(a>b) : opcode[2] == OP_GT
+compile_comparison.greater_than	hint	> must emit both operand expressions then OP_GT.	> doit émettre les deux expressions opérandes puis OP_GT.
+compile_comparison.less_equal	case	less or equal	inférieur ou égal
+compile_comparison.less_equal	check	compile_comparison(a<=b): opcode[2] == OP_LTE	compile_comparison(a<=b) : opcode[2] == OP_LTE
+compile_comparison.less_equal	hint	<= must emit both operand expressions then OP_LTE.	<= doit émettre les deux expressions opérandes puis OP_LTE.
+compile_comparison.greater_equal	case	greater or equal	supérieur ou égal
+compile_comparison.greater_equal	check	compile_comparison(a>=b): opcode[2] == OP_GTE	compile_comparison(a>=b) : opcode[2] == OP_GTE
+compile_comparison.greater_equal	hint	>= must emit both operand expressions then OP_GTE.	>= doit émettre les deux expressions opérandes puis OP_GTE.
+compile_comparison.single_term	case	single term	terme seul
+compile_comparison.single_term	check	compile_comparison(1): 1 instruction, no comparison operator	compile_comparison(1) : 1 instruction, pas d'opérateur de comparaison
+compile_comparison.single_term	hint	With no comparison operator, compile_comparison must delegate to compile_term unchanged.	Sans opérateur de comparaison, compile_comparison doit déléguer à compile_term sans modification.
+compile_equality.equal	case	equal	égalité
+compile_equality.equal	check	compile_equality(a==b): opcode[2] == OP_EQ	compile_equality(a==b) : opcode[2] == OP_EQ
+compile_equality.equal	hint	== must emit both operand expressions then OP_EQ.	== doit émettre les deux expressions opérandes puis OP_EQ.
+compile_equality.not_equal	case	not equal	inégalité
+compile_equality.not_equal	check	compile_equality(a!=b): opcode[2] == OP_NEQ	compile_equality(a!=b) : opcode[2] == OP_NEQ
+compile_equality.not_equal	hint	!= must emit both operand expressions then OP_NEQ.	!= doit émettre les deux expressions opérandes puis OP_NEQ.
+compile_equality.single_comparison	case	single comparison	comparaison seule
+compile_equality.single_comparison	check	compile_equality(5): 1 instruction, no equality operator	compile_equality(5) : 1 instruction, pas d'opérateur d'égalité
+compile_equality.single_comparison	hint	With no == or != operator, compile_equality must delegate to compile_comparison unchanged.	Sans opérateur == ou !=, compile_equality doit déléguer à compile_comparison sans modification.
+compile_equality.int_equal_id	case	int == identifier	entier == identifiant
+compile_equality.int_equal_id	check	compile_equality(42==x): opcode[0]==OP_PUSH, opcode[1]==OP_LOAD_VAR, opcode[2]==OP_EQ	compile_equality(42==x) : opcode[0]==OP_PUSH, opcode[1]==OP_LOAD_VAR, opcode[2]==OP_EQ
+compile_equality.int_equal_id	hint	Mixed operands: left integer uses OP_PUSH, right identifier uses OP_LOAD_VAR, then OP_EQ.	Opérandes mixtes : l'entier gauche utilise OP_PUSH, l'identifiant droit utilise OP_LOAD_VAR, puis OP_EQ.
+compile_expression.simple_integer	case	simple integer	entier simple
+compile_expression.simple_integer	check	compile_expression(42): 1 instruction, opcode[0] == OP_PUSH	compile_expression(42) : 1 instruction, opcode[0] == OP_PUSH
+compile_expression.simple_integer	hint	compile_expression must delegate through the full precedence chain down to compile_primary.	compile_expression doit déléguer à travers toute la chaîne de précédence jusqu'à compile_primary.
+compile_expression.precedence_mult_over_add	case	precedence: * over +	précédence : * sur +
+compile_expression.precedence_mult_over_add	check	compile_expression(1+2*3): opcode[3]==OP_MUL, opcode[4]==OP_ADD	compile_expression(1+2*3) : opcode[3]==OP_MUL, opcode[4]==OP_ADD
+compile_expression.precedence_mult_over_add	hint	compile_expression must respect operator precedence through the compile_term → compile_factor chain.	compile_expression doit respecter la précédence des opérateurs via la chaîne compile_term → compile_factor.
+compile_expression.comparison_chain	case	comparison chain	chaîne de comparaison
+compile_expression.comparison_chain	check	compile_expression(x>0): opcode[2] == OP_GT	compile_expression(x>0) : opcode[2] == OP_GT
+compile_expression.comparison_chain	hint	Comparison operators must be reachable from compile_expression via compile_equality → compile_comparison.	Les opérateurs de comparaison doivent être accessibles depuis compile_expression via compile_equality → compile_comparison.
+compile_expression.no_error_on_valid_input	case	no error on valid input	pas d'erreur sur entrée valide
+compile_expression.no_error_on_valid_input	check	compile_expression(7): had_error == 0	compile_expression(7) : had_error == 0
+compile_expression.no_error_on_valid_input	hint	compile_expression must not set had_error on valid input.	compile_expression ne doit pas activer had_error sur une entrée valide.
+compile_let_statement.simple_int_assignment	case	simple int assignment	affectation entière simple
+compile_let_statement.simple_int_assignment	check	compile_let_statement(let x=42;): opcode[0]==OP_PUSH, opcode[1]==OP_STORE_VAR	compile_let_statement(let x=42;) : opcode[0]==OP_PUSH, opcode[1]==OP_STORE_VAR
+compile_let_statement.simple_int_assignment	hint	let x = expr; must compile the RHS expression then emit OP_STORE_VAR with the variable name.	let x = expr; doit compiler l'expression du membre droit puis émettre OP_STORE_VAR avec le nom de variable.
+compile_let_statement.var_name_stored	case	variable name stored	nom de variable stocké
+compile_let_statement.var_name_stored	check	compile_let_statement(let y=0;): STORE_VAR operand_str == "y"	compile_let_statement(let y=0;) : STORE_VAR operand_str == "y"
+compile_let_statement.var_name_stored	hint	OP_STORE_VAR must carry the exact variable name from the let statement as operand_str.	OP_STORE_VAR doit porter le nom exact de la variable de l'instruction let comme operand_str.
+compile_let_statement.expression_rhs	case	expression as RHS	expression comme membre droit
+compile_let_statement.expression_rhs	check	compile_let_statement(let z=3+4;): opcode[2]==OP_ADD, opcode[3]==OP_STORE_VAR	compile_let_statement(let z=3+4;) : opcode[2]==OP_ADD, opcode[3]==OP_STORE_VAR
+compile_let_statement.expression_rhs	hint	The full RHS expression must be compiled before OP_STORE_VAR.	L'expression complète du membre droit doit être compilée avant OP_STORE_VAR.
+compile_let_statement.no_error_on_valid_input	case	no error on valid input	pas d'erreur sur entrée valide
+compile_let_statement.no_error_on_valid_input	check	compile_let_statement(let n=1;): had_error == 0	compile_let_statement(let n=1;) : had_error == 0
+compile_let_statement.no_error_on_valid_input	hint	compile_let_statement must not set had_error on valid input.	compile_let_statement ne doit pas activer had_error sur une entrée valide.
+compile_let_statement.id_rhs	case	identifier as RHS	identifiant comme membre droit
+compile_let_statement.id_rhs	check	compile_let_statement(let a=b;): opcode[0]==OP_LOAD_VAR, opcode[1]==OP_STORE_VAR	compile_let_statement(let a=b;) : opcode[0]==OP_LOAD_VAR, opcode[1]==OP_STORE_VAR
+compile_let_statement.id_rhs	hint	An identifier on the RHS must produce OP_LOAD_VAR before OP_STORE_VAR.	Un identifiant au membre droit doit produire OP_LOAD_VAR avant OP_STORE_VAR.
+compile_print_statement.single_int	case	single int argument	argument entier seul
+compile_print_statement.single_int	check	compile_print_statement(print(42);): opcode[1] == OP_PRINT	compile_print_statement(print(42);) : opcode[1] == OP_PRINT
+compile_print_statement.single_int	hint	print(expr); must emit the expression then OP_PRINT (with newline).	print(expr); doit émettre l'expression puis OP_PRINT (avec retour à la ligne).
+compile_print_statement.single_identifier	case	single identifier argument	argument identifiant seul
+compile_print_statement.single_identifier	check	compile_print_statement(print(x);): opcode[0]==OP_LOAD_VAR, opcode[1]==OP_PRINT	compile_print_statement(print(x);) : opcode[0]==OP_LOAD_VAR, opcode[1]==OP_PRINT
+compile_print_statement.single_identifier	hint	An identifier argument must produce OP_LOAD_VAR then OP_PRINT.	Un argument identifiant doit produire OP_LOAD_VAR puis OP_PRINT.
+compile_print_statement.single_string	case	single string argument	argument chaîne seul
+compile_print_statement.single_string	check	compile_print_statement(print("hello");): opcode[0] == OP_PUSH_STR	compile_print_statement(print("hello");) : opcode[0] == OP_PUSH_STR
+compile_print_statement.single_string	hint	A string literal argument must produce OP_PUSH_STR.	Un argument littéral chaîne doit produire OP_PUSH_STR.
+compile_print_statement.two_args_uses_no_newline	case	two args use no-newline	deux args utilisent sans-retour-à-la-ligne
+compile_print_statement.two_args_uses_no_newline	check	compile_print_statement(print(1,2);): opcode[1] == OP_PRINT_NO_NEWLINE	compile_print_statement(print(1,2);) : opcode[1] == OP_PRINT_NO_NEWLINE
+compile_print_statement.two_args_uses_no_newline	hint	When a comma follows an argument, emit OP_PRINT_NO_NEWLINE (not OP_PRINT) for that argument.	Quand une virgule suit un argument, émettre OP_PRINT_NO_NEWLINE (pas OP_PRINT) pour cet argument.
+compile_print_statement.last_arg_has_newline	case	last arg has newline	dernier arg avec retour à la ligne
+compile_print_statement.last_arg_has_newline	check	compile_print_statement(print(1,2);): last opcode == OP_PRINT	compile_print_statement(print(1,2);) : dernier opcode == OP_PRINT
+compile_print_statement.last_arg_has_newline	hint	The final argument of any print must always end with OP_PRINT (with newline).	Le dernier argument de tout print doit toujours se terminer par OP_PRINT (avec retour à la ligne).
+compile_if_statement.instruction_count	case	instruction count	nombre d'instructions
+compile_if_statement.instruction_count	check	compile_if_statement(if(x){let y=1;}): count==4, had_error==0	compile_if_statement(if(x){let y=1;}) : count==4, had_error==0
+compile_if_statement.instruction_count	hint	if(cond){body} must emit: condition instructions, JUMP_IF_FALSE, body instructions.	if(cond){corps} doit émettre : instructions de la condition, JUMP_IF_FALSE, instructions du corps.
+compile_if_statement.jump_if_false_opcode	case	JUMP_IF_FALSE opcode	opcode JUMP_IF_FALSE
+compile_if_statement.jump_if_false_opcode	check	compile_if_statement(if(x){}): opcode[1] == OP_JUMP_IF_FALSE	compile_if_statement(if(x){}) : opcode[1] == OP_JUMP_IF_FALSE
+compile_if_statement.jump_if_false_opcode	hint	The instruction immediately after the condition must be OP_JUMP_IF_FALSE.	L'instruction immédiatement après la condition doit être OP_JUMP_IF_FALSE.
+compile_if_statement.backpatch_address	case	backpatch address	adresse du rétro-patch
+compile_if_statement.backpatch_address	check	compile_if_statement(if(x){let y=1;}): JUMP_IF_FALSE operand == 4	compile_if_statement(if(x){let y=1;}) : opérande de JUMP_IF_FALSE == 4
+compile_if_statement.backpatch_address	hint	After compiling the body, backpatch the JUMP_IF_FALSE operand to code->count.	Après la compilation du corps, rétro-patcher l'opérande de JUMP_IF_FALSE pour pointer vers code->count.
+compile_if_statement.empty_block_backpatch	case	empty block backpatch	rétro-patch sur bloc vide
+compile_if_statement.empty_block_backpatch	check	compile_if_statement(if(1){}): JUMP_IF_FALSE operand == 2	compile_if_statement(if(1){}) : opérande de JUMP_IF_FALSE == 2
+compile_if_statement.empty_block_backpatch	hint	For an empty block the jump must point to the instruction right after it (index 2).	Pour un bloc vide, le saut doit pointer vers l'instruction juste après (index 2).
+compile_while_statement.instruction_count	case	instruction count	nombre d'instructions
+compile_while_statement.instruction_count	check	compile_while_statement(while(x){let y=1;}): count==5, had_error==0	compile_while_statement(while(x){let y=1;}) : count==5, had_error==0
+compile_while_statement.instruction_count	hint	while(cond){body} must emit: condition, JUMP_IF_FALSE, body instructions, JUMP back.	while(cond){corps} doit émettre : condition, JUMP_IF_FALSE, instructions du corps, JUMP retour.
+compile_while_statement.back_jump_opcode_and_address	case	back-jump opcode and address	opcode et adresse du saut retour
+compile_while_statement.back_jump_opcode_and_address	check	compile_while_statement: opcode[4]==OP_JUMP, operand==0 (loop_start)	compile_while_statement : opcode[4]==OP_JUMP, opérande==0 (début de boucle)
+compile_while_statement.back_jump_opcode_and_address	hint	After the body, emit OP_JUMP with operand = loop_start (the index of the first condition instruction).	Après le corps, émettre OP_JUMP avec opérande = loop_start (l'index de la première instruction de condition).
+compile_while_statement.exit_jump_backpatch	case	exit jump backpatch	rétro-patch du saut de sortie
+compile_while_statement.exit_jump_backpatch	check	compile_while_statement: JUMP_IF_FALSE operand == 5 (past the loop)	compile_while_statement : opérande de JUMP_IF_FALSE == 5 (après la boucle)
+compile_while_statement.exit_jump_backpatch	hint	Backpatch the JUMP_IF_FALSE operand to code->count after emitting the back-jump OP_JUMP.	Rétro-patcher l'opérande de JUMP_IF_FALSE vers code->count après l'émission du OP_JUMP retour.
+compile_while_statement.empty_body	case	empty body	corps vide
+compile_while_statement.empty_body	check	compile_while_statement(while(1){}): count==3, JUMP_IF_FALSE operand==3	compile_while_statement(while(1){}) : count==3, opérande de JUMP_IF_FALSE==3
+compile_while_statement.empty_body	hint	An empty while body must produce 3 instructions: cond, JUMP_IF_FALSE, JUMP; exit jump points past index 2.	Un corps while vide doit produire 3 instructions : cond, JUMP_IF_FALSE, JUMP ; le saut de sortie pointe après l'index 2.
+compile_block.empty_block	case	empty block	bloc vide
+compile_block.empty_block	check	compile_block({}): count==0, had_error==0	compile_block({}) : count==0, had_error==0
+compile_block.empty_block	hint	An empty block must emit no instructions and not set had_error.	Un bloc vide ne doit émettre aucune instruction et ne pas activer had_error.
+compile_block.single_statement	case	single statement	instruction unique
+compile_block.single_statement	check	compile_block({let x=1;}): count == 2	compile_block({let x=1;}) : count == 2
+compile_block.single_statement	hint	A block with one statement must emit exactly the instructions produced by that statement.	Un bloc avec une instruction doit émettre exactement les instructions produites par cette instruction.
+compile_block.two_statements	case	two statements	deux instructions
+compile_block.two_statements	check	compile_block({let x=1;let y=2;}): count == 4	compile_block({let x=1;let y=2;}) : count == 4
+compile_block.two_statements	hint	A block with two statements must emit all instructions from both statements in order.	Un bloc avec deux instructions doit émettre toutes les instructions des deux instructions dans l'ordre.
+compile_statement.dispatches_let	case	dispatches let	dispatch let
+compile_statement.dispatches_let	check	compile_statement(let x=1;): opcode[1] == OP_STORE_VAR	compile_statement(let x=1;) : opcode[1] == OP_STORE_VAR
+compile_statement.dispatches_let	hint	When the current token is TOKEN_LET, compile_statement must call compile_let_statement.	Quand le token courant est TOKEN_LET, compile_statement doit appeler compile_let_statement.
+compile_statement.dispatches_print	case	dispatches print	dispatch print
+compile_statement.dispatches_print	check	compile_statement(print(42);): last opcode == OP_PRINT	compile_statement(print(42);) : dernier opcode == OP_PRINT
+compile_statement.dispatches_print	hint	When the current token is TOKEN_PRINT, compile_statement must call compile_print_statement.	Quand le token courant est TOKEN_PRINT, compile_statement doit appeler compile_print_statement.
+compile_statement.dispatches_if	case	dispatches if	dispatch if
+compile_statement.dispatches_if	check	compile_statement(if(1){}): opcode[1] == OP_JUMP_IF_FALSE	compile_statement(if(1){}) : opcode[1] == OP_JUMP_IF_FALSE
+compile_statement.dispatches_if	hint	When the current token is TOKEN_IF, compile_statement must call compile_if_statement.	Quand le token courant est TOKEN_IF, compile_statement doit appeler compile_if_statement.
+compile_statement.dispatches_while	case	dispatches while	dispatch while
+compile_statement.dispatches_while	check	compile_statement(while(1){}): last opcode == OP_JUMP	compile_statement(while(1){}) : dernier opcode == OP_JUMP
+compile_statement.dispatches_while	hint	When the current token is TOKEN_WHILE, compile_statement must call compile_while_statement.	Quand le token courant est TOKEN_WHILE, compile_statement doit appeler compile_while_statement.
+compile.null_input_returns_null	case	null input returns null	entrée nulle retourne null
+compile.null_input_returns_null	check	compile(NULL) == NULL	compile(NULL) == NULL
+compile.null_input_returns_null	hint	compile must return NULL immediately when the token list is NULL.	compile doit retourner NULL immédiatement quand la liste de tokens est NULL.
+compile.halt_at_end	case	halt at end	halt en fin de programme
+compile.halt_at_end	check	compile(let x=1;): last opcode == OP_HALT	compile(let x=1;) : dernier opcode == OP_HALT
+compile.halt_at_end	hint	compile must always append OP_HALT as the final instruction of the bytecode.	compile doit toujours ajouter OP_HALT comme dernière instruction du bytecode.
+compile.single_let_statement	case	single let statement	instruction let unique
+compile.single_let_statement	check	compile(let x=42;): count==3, opcode[0]==OP_PUSH, opcode[1]==OP_STORE_VAR	compile(let x=42;) : count==3, opcode[0]==OP_PUSH, opcode[1]==OP_STORE_VAR
+compile.single_let_statement	hint	A single let statement must produce exactly 3 instructions: PUSH, STORE_VAR, HALT.	Une instruction let unique doit produire exactement 3 instructions : PUSH, STORE_VAR, HALT.
+compile.single_print_statement	case	single print statement	instruction print unique
+compile.single_print_statement	check	compile(print(x);): count==3, opcode[1]==OP_PRINT	compile(print(x);) : count==3, opcode[1]==OP_PRINT
+compile.single_print_statement	hint	A single print statement must produce exactly 3 instructions: LOAD_VAR, PRINT, HALT.	Une instruction print unique doit produire exactement 3 instructions : LOAD_VAR, PRINT, HALT.
+compile.multi_statement	case	multiple statements	instructions multiples
+compile.multi_statement	check	compile(let x=1; print(x);): count == 5	compile(let x=1; print(x);) : count == 5
+compile.multi_statement	hint	Two statements must produce 5 instructions: PUSH, STORE_VAR, LOAD_VAR, PRINT, HALT.	Deux instructions doivent produire 5 instructions : PUSH, STORE_VAR, LOAD_VAR, PRINT, HALT.
+compile.no_error_on_valid_program	case	no error on valid program	pas d'erreur sur programme valide
+compile.no_error_on_valid_program	check	compile(valid program) != NULL	compile(programme valide) != NULL
+compile.no_error_on_valid_program	hint	compile must return a non-NULL bytecode for any syntactically valid program.	compile doit retourner un bytecode non NULL pour tout programme syntaxiquement valide.

@@ -1,0 +1,11 @@
+let score = 100;
+print("Welcome to the game!");
+print("Your score:");
+print(score);
+
+if (score >= 100) {
+    print("Excellent!");
+} 
+
+let message = 42;
+print(message);

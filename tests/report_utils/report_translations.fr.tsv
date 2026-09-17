@@ -1,0 +1,274 @@
+check_keyword.let	case	let	let
+check_keyword.let	check	check_keyword("let") == TOKEN_LET	check_keyword("let") == TOKEN_LET
+check_keyword.let	hint	"let" is a reserved keyword.	« let » est un mot-clé réservé.
+check_keyword.print	case	print	print
+check_keyword.print	check	check_keyword("print") == TOKEN_PRINT	check_keyword("print") == TOKEN_PRINT
+check_keyword.print	hint	"print" is a reserved keyword.	« print » est un mot-clé réservé.
+check_keyword.if_keyword	case	if keyword	mot-clé if
+check_keyword.if_keyword	check	check_keyword("if") == TOKEN_IF	check_keyword("if") == TOKEN_IF
+check_keyword.if_keyword	hint	"if" is a reserved keyword.	« if » est un mot-clé réservé.
+check_keyword.while_keyword	case	while keyword	mot-clé while
+check_keyword.while_keyword	check	check_keyword("while") == TOKEN_WHILE	check_keyword("while") == TOKEN_WHILE
+check_keyword.while_keyword	hint	"while" is a reserved keyword.	« while » est un mot-clé réservé.
+check_keyword.unknown_word_is_identifier	case	unknown word is identifier	un mot inconnu est un identifiant
+check_keyword.unknown_word_is_identifier	check	check_keyword("myvar") == TOKEN_ID	check_keyword("myvar") == TOKEN_ID
+check_keyword.unknown_word_is_identifier	hint	Anything that is not a keyword must return TOKEN_ID.	Tout ce qui n'est pas un mot-clé doit retourner TOKEN_ID.
+check_keyword.partial_keyword_is_identifier	case	partial keyword is identifier	un préfixe de mot-clé est un identifiant
+check_keyword.partial_keyword_is_identifier	check	check_keyword("letme") == TOKEN_ID	check_keyword("letme") == TOKEN_ID
+check_keyword.partial_keyword_is_identifier	hint	"letme" starts like "let" but is not an exact match; must return TOKEN_ID.	« letme » ressemble à « let » mais n'est pas une correspondance exacte ; doit retourner TOKEN_ID.
+check_keyword.single_letter_is_identifier	case	single letter is identifier	une lettre seule est un identifiant
+check_keyword.single_letter_is_identifier	check	check_keyword("x") == TOKEN_ID	check_keyword("x") == TOKEN_ID
+check_keyword.single_letter_is_identifier	hint	A single letter that is not a keyword must return TOKEN_ID.	Une lettre seule qui n'est pas un mot-clé doit retourner TOKEN_ID.
+peek_char.returns_char_at_pos_zero	case	returns char at pos zero	retourne le caractère à la position zéro
+peek_char.returns_char_at_pos_zero	check	peek_char at pos=0 on "hello" == 'h'	peek_char en pos=0 sur "hello" == 'h'
+peek_char.returns_char_at_pos_zero	hint	peek_char must return the character at the current position.	peek_char doit retourner le caractère à la position courante.
+peek_char.returns_char_at_arbitrary_position	case	returns char at arbitrary position	retourne le caractère à une position quelconque
+peek_char.returns_char_at_arbitrary_position	check	peek_char at pos=3 on "hello" == 'l'	peek_char en pos=3 sur "hello" == 'l'
+peek_char.returns_char_at_arbitrary_position	hint	peek_char must return source[pos], not always source[0].	peek_char doit retourner source[pos], pas toujours source[0].
+peek_char.does_not_advance_position	case	does not advance position	ne fait pas avancer la position
+peek_char.does_not_advance_position	check	l.pos == 0 after peek_char	l.pos == 0 après peek_char
+peek_char.does_not_advance_position	hint	peek_char must not modify lexer->pos.	peek_char ne doit pas modifier lexer->pos.
+peek_char.returns_null_at_end_of_source	case	returns null at end of source	retourne null en fin de source
+peek_char.returns_null_at_end_of_source	check	peek_char at pos==length returns '\0'	peek_char en pos==longueur retourne '\0'
+peek_char.returns_null_at_end_of_source	hint	peek_char must return '\0' when pos is at or beyond the end of source.	peek_char doit retourner '\0' quand pos est à la fin ou au-delà de la source.
+peek_char.empty_source_returns_null	case	empty source returns null	source vide retourne null
+peek_char.empty_source_returns_null	check	peek_char on empty source == '\0'	peek_char sur source vide == '\0'
+peek_char.empty_source_returns_null	hint	peek_char on an empty source must return '\0'.	peek_char sur une source vide doit retourner '\0'.
+peek_next_char.returns_char_at_pos_plus_one	case	returns char at pos plus one	retourne le caractère à pos+1
+peek_next_char.returns_char_at_pos_plus_one	check	peek_next_char at pos=0 on "hello" == 'e'	peek_next_char en pos=0 sur "hello" == 'e'
+peek_next_char.returns_char_at_pos_plus_one	hint	peek_next_char must return source[pos+1].	peek_next_char doit retourner source[pos+1].
+peek_next_char.returns_char_at_arbitrary_position	case	returns char at arbitrary position	retourne le caractère à une position quelconque
+peek_next_char.returns_char_at_arbitrary_position	check	peek_next_char at pos=1 on "hello" == 'l'	peek_next_char en pos=1 sur "hello" == 'l'
+peek_next_char.returns_char_at_arbitrary_position	hint	peek_next_char must return source[pos+1] for any pos.	peek_next_char doit retourner source[pos+1] quelle que soit la position.
+peek_next_char.does_not_advance_position	case	does not advance position	ne fait pas avancer la position
+peek_next_char.does_not_advance_position	check	l.pos == 0 after peek_next_char	l.pos == 0 après peek_next_char
+peek_next_char.does_not_advance_position	hint	peek_next_char must not modify lexer->pos.	peek_next_char ne doit pas modifier lexer->pos.
+peek_next_char.returns_null_when_next_is_end	case	returns null when next is end	retourne null quand le suivant est la fin
+peek_next_char.returns_null_when_next_is_end	check	peek_next_char at pos=1 on "hi" (length=2) == '\0'	peek_next_char en pos=1 sur "hi" (longueur=2) == '\0'
+peek_next_char.returns_null_when_next_is_end	hint	peek_next_char must return '\0' when pos+1 is at or beyond end of source.	peek_next_char doit retourner '\0' quand pos+1 est à la fin ou au-delà de la source.
+peek_next_char.empty_source_returns_null	case	empty source returns null	source vide retourne null
+peek_next_char.empty_source_returns_null	check	peek_next_char on empty source == '\0'	peek_next_char sur source vide == '\0'
+peek_next_char.empty_source_returns_null	hint	peek_next_char on empty source must return '\0'.	peek_next_char sur une source vide doit retourner '\0'.
+advance_pos.returns_current_char	case	returns current char	retourne le caractère courant
+advance_pos.returns_current_char	check	advance_pos on "hello" at pos=0 returns 'h'	advance_pos sur "hello" en pos=0 retourne 'h'
+advance_pos.returns_current_char	hint	advance_pos must return the character at the current position before advancing.	advance_pos doit retourner le caractère à la position courante avant d'avancer.
+advance_pos.increments_position_by_one	case	increments position by one	incrémente la position de un
+advance_pos.increments_position_by_one	check	l.pos == 1 after advance_pos on "hello"	l.pos == 1 après advance_pos sur "hello"
+advance_pos.increments_position_by_one	hint	advance_pos must increment pos by exactly 1.	advance_pos doit incrémenter pos d'exactement 1.
+advance_pos.does_not_change_line_on_regular_char	case	does not change line on regular char	ne change pas le numéro de ligne pour un caractère normal
+advance_pos.does_not_change_line_on_regular_char	check	l.line == 1 after advancing over a regular character	l.line == 1 après avoir avancé sur un caractère normal
+advance_pos.does_not_change_line_on_regular_char	hint	advance_pos must only increment line when the consumed character is '\n'.	advance_pos ne doit incrémenter line que si le caractère consommé est '\n'.
+advance_pos.increments_line_on_newline	case	increments line on newline	incrémente le numéro de ligne sur un saut de ligne
+advance_pos.increments_line_on_newline	check	l.line == 2 after advancing over '\n'	l.line == 2 après avoir avancé sur '\n'
+advance_pos.increments_line_on_newline	hint	advance_pos must increment lexer->line when the consumed character is a newline.	advance_pos doit incrémenter lexer->line quand le caractère consommé est un saut de ligne.
+scan_identifier.single_letter_identifier	case	single letter identifier	identifiant d'une seule lettre
+scan_identifier.single_letter_identifier	check	scan_identifier("x") returns non-NULL	scan_identifier("x") retourne non-NULL
+scan_identifier.single_letter_identifier	hint	scan_identifier must always return a valid token.	scan_identifier doit toujours retourner un token valide.
+scan_identifier.single_letter_identifier	check	token type == TOKEN_ID for "x"	type du token == TOKEN_ID pour "x"
+scan_identifier.single_letter_identifier	hint	"x" is not a keyword; its type must be TOKEN_ID.	"x" n'est pas un mot-clé ; son type doit être TOKEN_ID.
+scan_identifier.single_letter_identifier	check	token lexeme == "x"	lexème du token == "x"
+scan_identifier.single_letter_identifier	hint	The lexeme must contain the full identifier text.	Le lexème doit contenir le texte complet de l'identifiant.
+scan_identifier.multi_letter_identifier	case	multi letter identifier	identifiant de plusieurs lettres
+scan_identifier.multi_letter_identifier	check	scan_identifier("myvar") returns non-NULL	scan_identifier("myvar") retourne non-NULL
+scan_identifier.multi_letter_identifier	hint	scan_identifier must always return a valid token.	scan_identifier doit toujours retourner un token valide.
+scan_identifier.multi_letter_identifier	check	token type == TOKEN_ID for "myvar"	type du token == TOKEN_ID pour "myvar"
+scan_identifier.multi_letter_identifier	hint	"myvar" is not a keyword.	"myvar" n'est pas un mot-clé.
+scan_identifier.multi_letter_identifier	check	token lexeme == "myvar"	lexème du token == "myvar"
+scan_identifier.multi_letter_identifier	hint	The lexeme must contain all consecutive letters.	Le lexème doit contenir toutes les lettres consécutives.
+scan_identifier.recognizes_if_keyword	case	recognizes if keyword	reconnaît le mot-clé if
+scan_identifier.recognizes_if_keyword	check	scan_identifier("if") returns non-NULL	scan_identifier("if") retourne non-NULL
+scan_identifier.recognizes_if_keyword	hint	scan_identifier must always return a valid token.	scan_identifier doit toujours retourner un token valide.
+scan_identifier.recognizes_if_keyword	check	token type == TOKEN_IF for "if"	type du token == TOKEN_IF pour "if"
+scan_identifier.recognizes_if_keyword	hint	scan_identifier must use check_keyword to detect reserved words.	scan_identifier doit utiliser check_keyword pour détecter les mots-clés réservés.
+scan_identifier.recognizes_if_keyword	check	token lexeme == "if"	lexème du token == "if"
+scan_identifier.recognizes_if_keyword	hint	The lexeme must still contain the keyword text.	Le lexème doit toujours contenir le texte du mot-clé.
+scan_identifier.recognizes_let_keyword	case	recognizes let keyword	reconnaît le mot-clé let
+scan_identifier.recognizes_let_keyword	check	scan_identifier("let") returns non-NULL	scan_identifier("let") retourne non-NULL
+scan_identifier.recognizes_let_keyword	hint	scan_identifier must always return a valid token.	scan_identifier doit toujours retourner un token valide.
+scan_identifier.recognizes_let_keyword	check	token type == TOKEN_LET for "let"	type du token == TOKEN_LET pour "let"
+scan_identifier.recognizes_let_keyword	hint	"let" is a reserved keyword.	« let » est un mot-clé réservé.
+scan_identifier.stops_at_first_non_letter	case	stops at first non letter	s'arrête au premier caractère non-lettre
+scan_identifier.stops_at_first_non_letter	check	scan_identifier("abc ") returns non-NULL	scan_identifier("abc ") retourne non-NULL
+scan_identifier.stops_at_first_non_letter	hint	scan_identifier must always return a valid token.	scan_identifier doit toujours retourner un token valide.
+scan_identifier.stops_at_first_non_letter	check	scan_identifier on "abc " reads only "abc"	scan_identifier sur "abc " lit uniquement "abc"
+scan_identifier.stops_at_first_non_letter	hint	scan_identifier must stop when it encounters a non-letter character.	scan_identifier doit s'arrêter dès qu'il rencontre un caractère non-lettre.
+scan_identifier.stops_at_first_non_letter	check	l.pos == 3 after scanning "abc" from "abc "	l.pos == 3 après avoir analysé "abc" dans "abc "
+scan_identifier.stops_at_first_non_letter	hint	pos must point to the first non-letter character after scanning.	pos doit pointer sur le premier caractère non-lettre après l'analyse.
+scan_identifier.starts_at_current_position	case	starts at current position	commence à la position courante
+scan_identifier.starts_at_current_position	check	scan_identifier at pos=1 returns non-NULL	scan_identifier en pos=1 retourne non-NULL
+scan_identifier.starts_at_current_position	hint	scan_identifier must always return a valid token.	scan_identifier doit toujours retourner un token valide.
+scan_identifier.starts_at_current_position	check	scan_identifier at pos=1 of "xyz" reads "yz"	scan_identifier en pos=1 de "xyz" lit "yz"
+scan_identifier.starts_at_current_position	hint	scan_identifier must start reading from lexer->pos, not from 0.	scan_identifier doit commencer à lire depuis lexer->pos, pas depuis 0.
+scan_number.single_digit	case	single digit	chiffre unique
+scan_number.single_digit	check	scan_number("7") returns non-NULL	scan_number("7") retourne non-NULL
+scan_number.single_digit	hint	scan_number must always return a valid token.	scan_number doit toujours retourner un token valide.
+scan_number.single_digit	check	token type == TOKEN_INT	type du token == TOKEN_INT
+scan_number.single_digit	hint	scan_number must always produce a TOKEN_INT token.	scan_number doit toujours produire un token TOKEN_INT.
+scan_number.single_digit	check	token lexeme == "7"	lexème du token == "7"
+scan_number.single_digit	hint	The lexeme must contain the digit string.	Le lexème doit contenir la chaîne de chiffres.
+scan_number.multi_digit_number	case	multi digit number	nombre de plusieurs chiffres
+scan_number.multi_digit_number	check	scan_number("42") returns non-NULL	scan_number("42") retourne non-NULL
+scan_number.multi_digit_number	hint	scan_number must always return a valid token.	scan_number doit toujours retourner un token valide.
+scan_number.multi_digit_number	check	token type == TOKEN_INT for "42"	type du token == TOKEN_INT pour "42"
+scan_number.multi_digit_number	hint	scan_number must produce TOKEN_INT.	scan_number doit produire TOKEN_INT.
+scan_number.multi_digit_number	check	token lexeme == "42"	lexème du token == "42"
+scan_number.multi_digit_number	hint	The lexeme must contain all consecutive digits.	Le lexème doit contenir tous les chiffres consécutifs.
+scan_number.stops_at_first_non_digit	case	stops at first non digit	s'arrête au premier caractère non-chiffre
+scan_number.stops_at_first_non_digit	check	scan_number("123+") returns non-NULL	scan_number("123+") retourne non-NULL
+scan_number.stops_at_first_non_digit	hint	scan_number must always return a valid token.	scan_number doit toujours retourner un token valide.
+scan_number.stops_at_first_non_digit	check	scan_number on "123+" reads only "123"	scan_number sur "123+" lit uniquement "123"
+scan_number.stops_at_first_non_digit	hint	scan_number must stop when it encounters a non-digit character.	scan_number doit s'arrêter dès qu'il rencontre un caractère non-chiffre.
+scan_number.stops_at_first_non_digit	check	l.pos == 3 after scanning "123" from "123+"	l.pos == 3 après avoir analysé "123" dans "123+"
+scan_number.stops_at_first_non_digit	hint	pos must point to the first non-digit character after scanning.	pos doit pointer sur le premier caractère non-chiffre après l'analyse.
+scan_number.starts_at_current_position	case	starts at current position	commence à la position courante
+scan_number.starts_at_current_position	check	scan_number at pos=2 returns non-NULL	scan_number en pos=2 retourne non-NULL
+scan_number.starts_at_current_position	hint	scan_number must always return a valid token.	scan_number doit toujours retourner un token valide.
+scan_number.starts_at_current_position	check	scan_number at pos=2 of "1234" reads "34"	scan_number en pos=2 de "1234" lit "34"
+scan_number.starts_at_current_position	hint	scan_number must start reading from lexer->pos, not from 0.	scan_number doit commencer à lire depuis lexer->pos, pas depuis 0.
+scan_number.zero_is_valid	case	zero is valid	zéro est valide
+scan_number.zero_is_valid	check	scan_number("0") returns non-NULL	scan_number("0") retourne non-NULL
+scan_number.zero_is_valid	hint	scan_number must always return a valid token.	scan_number doit toujours retourner un token valide.
+scan_number.zero_is_valid	check	token type == TOKEN_INT for "0"	type du token == TOKEN_INT pour "0"
+scan_number.zero_is_valid	hint	"0" is a valid integer literal.	"0" est un littéral entier valide.
+scan_number.zero_is_valid	check	token lexeme == "0"	lexème du token == "0"
+scan_number.zero_is_valid	hint	The lexeme for the integer zero must be "0".	Le lexème pour l'entier zéro doit être "0".
+scan_string.simple_string	case	simple string	chaîne simple
+scan_string.simple_string	check	scan_string on "\"hello\"" returns non-NULL	scan_string sur "\"hello\"" retourne non-NULL
+scan_string.simple_string	hint	scan_string must always return a valid token.	scan_string doit toujours retourner un token valide.
+scan_string.simple_string	check	token type == TOKEN_STRING	type du token == TOKEN_STRING
+scan_string.simple_string	hint	A valid string literal must produce TOKEN_STRING.	Un littéral de chaîne valide doit produire TOKEN_STRING.
+scan_string.simple_string	check	token lexeme == "hello" (without surrounding quotes)	lexème du token == "hello" (sans les guillemets)
+scan_string.simple_string	hint	The lexeme must contain the string content without the quotes.	Le lexème doit contenir le contenu de la chaîne sans les guillemets.
+scan_string.empty_string	case	empty string	chaîne vide
+scan_string.empty_string	check	scan_string("\"\"") returns non-NULL	scan_string("\"\"") retourne non-NULL
+scan_string.empty_string	hint	scan_string must always return a valid token.	scan_string doit toujours retourner un token valide.
+scan_string.empty_string	check	token type == TOKEN_STRING for empty string "\"\""	type du token == TOKEN_STRING pour la chaîne vide "\"\""
+scan_string.empty_string	hint	An empty string literal must produce TOKEN_STRING.	Un littéral de chaîne vide doit produire TOKEN_STRING.
+scan_string.empty_string	check	token lexeme == "" for empty string	lexème du token == "" pour la chaîne vide
+scan_string.empty_string	hint	The lexeme for an empty string literal must be the empty string.	Le lexème d'un littéral de chaîne vide doit être la chaîne vide.
+scan_string.string_with_spaces	case	string with spaces	chaîne avec espaces
+scan_string.string_with_spaces	check	scan_string("hello world") returns non-NULL	scan_string("hello world") retourne non-NULL
+scan_string.string_with_spaces	hint	scan_string must always return a valid token.	scan_string doit toujours retourner un token valide.
+scan_string.string_with_spaces	check	token type == TOKEN_STRING for "\"hello world\""	type du token == TOKEN_STRING pour "\"hello world\""
+scan_string.string_with_spaces	hint	Strings with spaces must produce TOKEN_STRING.	Les chaînes avec espaces doivent produire TOKEN_STRING.
+scan_string.string_with_spaces	check	token lexeme == "hello world"	lexème du token == "hello world"
+scan_string.string_with_spaces	hint	Spaces inside a string literal must be preserved in the lexeme.	Les espaces à l'intérieur d'un littéral de chaîne doivent être conservés dans le lexème.
+scan_string.unterminated_string_produces_error	case	unterminated string produces error	une chaîne non terminée produit une erreur
+scan_string.unterminated_string_produces_error	check	scan_string on unterminated string returns non-NULL	scan_string sur une chaîne non terminée retourne non-NULL
+scan_string.unterminated_string_produces_error	hint	scan_string must return a token even for unterminated strings.	scan_string doit retourner un token même pour les chaînes non terminées.
+scan_string.unterminated_string_produces_error	check	token type == TOKEN_ERROR for unterminated string	type du token == TOKEN_ERROR pour une chaîne non terminée
+scan_string.unterminated_string_produces_error	hint	A string with no closing '"' before EOF must produce TOKEN_ERROR.	Une chaîne sans guillemet fermant avant la fin de fichier doit produire TOKEN_ERROR.
+scan_string.consumes_closing_quote	case	consumes closing quote	consomme le guillemet fermant
+scan_string.consumes_closing_quote	check	l.pos == 4 after scanning "\"hi\"" (length=4)	l.pos == 4 après l'analyse de "\"hi\"" (longueur=4)
+scan_string.consumes_closing_quote	hint	scan_string must consume the closing '"', leaving pos past it so the tokenize loop does not re-process it.	scan_string doit consommer le guillemet fermant et laisser pos après lui pour que la boucle de tokenize ne le traite pas à nouveau.
+tokenize.empty_source_gives_only_eof	case	empty source gives only eof	une source vide donne uniquement EOF
+tokenize.empty_source_gives_only_eof	check	tokenize("") != NULL	tokenize("") != NULL
+tokenize.empty_source_gives_only_eof	hint	tokenize must always return a valid (non-NULL) token list.	tokenize doit toujours retourner une liste de tokens valide (non-NULL).
+tokenize.empty_source_gives_only_eof	check	list->head != NULL for tokenize("")	list->head != NULL pour tokenize("")
+tokenize.empty_source_gives_only_eof	hint	Even an empty source must produce at least TOKEN_EOF.	Même une source vide doit produire au moins TOKEN_EOF.
+tokenize.empty_source_gives_only_eof	check	first (and only content) token == TOKEN_EOF for empty source	le premier (et unique) token == TOKEN_EOF pour une source vide
+tokenize.empty_source_gives_only_eof	hint	The only token for an empty source must be TOKEN_EOF.	Le seul token pour une source vide doit être TOKEN_EOF.
+tokenize.empty_source_gives_only_eof	check	count == 1 for empty source (only TOKEN_EOF)	nombre == 1 pour une source vide (TOKEN_EOF uniquement)
+tokenize.empty_source_gives_only_eof	hint	An empty source must produce exactly one token: TOKEN_EOF.	Une source vide doit produire exactement un token : TOKEN_EOF.
+tokenize.last_token_is_always_eof	case	last token is always eof	le dernier token est toujours EOF
+tokenize.last_token_is_always_eof	check	tokenize("let x") returns non-NULL	tokenize("let x") retourne non-NULL
+tokenize.last_token_is_always_eof	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.last_token_is_always_eof	check	token list is not empty	la liste de tokens n'est pas vide
+tokenize.last_token_is_always_eof	hint	last token must be TOKEN_EOF	le dernier token doit être TOKEN_EOF
+tokenize.last_token_is_always_eof	check	last token of any source == TOKEN_EOF	le dernier token de n'importe quelle source == TOKEN_EOF
+tokenize.last_token_is_always_eof	hint	tokenize must always append TOKEN_EOF as the final token.	tokenize doit toujours ajouter TOKEN_EOF comme dernier token.
+tokenize.keyword_let	case	keyword let	mot-clé let
+tokenize.keyword_let	check	tokenize("let") returns non-NULL	tokenize("let") retourne non-NULL
+tokenize.keyword_let	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.keyword_let	check	first token is non-NULL	le premier token est non-NULL
+tokenize.keyword_let	hint	Token list must contain at least one token.	La liste de tokens doit contenir au moins un token.
+tokenize.keyword_let	check	first token == TOKEN_LET for source "let"	premier token == TOKEN_LET pour la source "let"
+tokenize.keyword_let	hint	"let" must be tokenized as TOKEN_LET.	"let" doit être tokenisé comme TOKEN_LET.
+tokenize.keyword_let	check	TOKEN_LET lexeme == "let"	lexème TOKEN_LET == "let"
+tokenize.keyword_let	hint	The lexeme must match the source text.	Le lexème doit correspondre au texte source.
+tokenize.all_other_keywords	case	all other keywords	tous les autres mots-clés
+tokenize.all_other_keywords	check	keyword token type matches expected value	le type du token mot-clé correspond à la valeur attendue
+tokenize.all_other_keywords	hint	Each keyword (print, if, while) must produce its corresponding token type.	Chaque mot-clé (print, if, while) doit produire son type de token correspondant.
+tokenize.identifier	case	identifier	identifiant
+tokenize.identifier	check	tokenize("myvar") returns non-NULL	tokenize("myvar") retourne non-NULL
+tokenize.identifier	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.identifier	check	first token == TOKEN_ID for "myvar"	premier token == TOKEN_ID pour "myvar"
+tokenize.identifier	hint	A non-keyword word must produce TOKEN_ID.	Un mot qui n'est pas un mot-clé doit produire TOKEN_ID.
+tokenize.identifier	check	TOKEN_ID lexeme == "myvar"	lexème TOKEN_ID == "myvar"
+tokenize.identifier	hint	The lexeme must match the identifier text.	Le lexème doit correspondre au texte de l'identifiant.
+tokenize.integer_literal	case	integer literal	littéral entier
+tokenize.integer_literal	check	tokenize("42") returns non-NULL	tokenize("42") retourne non-NULL
+tokenize.integer_literal	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.integer_literal	check	first token == TOKEN_INT for "42"	premier token == TOKEN_INT pour "42"
+tokenize.integer_literal	hint	An integer literal must produce TOKEN_INT.	Un littéral entier doit produire TOKEN_INT.
+tokenize.integer_literal	check	TOKEN_INT lexeme == "42"	lexème TOKEN_INT == "42"
+tokenize.integer_literal	hint	The lexeme must contain the digit string.	Le lexème doit contenir la chaîne de chiffres.
+tokenize.string_literal	case	string literal	littéral de chaîne
+tokenize.string_literal	check	tokenize returns non-NULL	tokenize retourne non-NULL
+tokenize.string_literal	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.string_literal	check	first token == TOKEN_STRING for "\"hello\""	premier token == TOKEN_STRING pour "\"hello\""
+tokenize.string_literal	hint	A string literal must produce TOKEN_STRING.	Un littéral de chaîne doit produire TOKEN_STRING.
+tokenize.string_literal	check	TOKEN_STRING lexeme == "hello" (without quotes)	lexème TOKEN_STRING == "hello" (sans guillemets)
+tokenize.string_literal	hint	The string lexeme must not include the surrounding quotes.	Le lexème de chaîne ne doit pas inclure les guillemets.
+tokenize.single_char_operators_and_delimiters	case	single char operators and delimiters	opérateurs et délimiteurs d'un seul caractère
+tokenize.single_char_operators_and_delimiters	check	single-character operator/delimiter token type	type du token pour opérateur/délimiteur d'un seul caractère
+tokenize.single_char_operators_and_delimiters	hint	Each single-character operator/delimiter must map to its token type.	Chaque opérateur/délimiteur d'un seul caractère doit correspondre à son type de token.
+tokenize.assign_is_single_equals	case	assign is single equals	l'assignation est un seul égal
+tokenize.assign_is_single_equals	check	tokenize("=") returns non-NULL	tokenize("=") retourne non-NULL
+tokenize.assign_is_single_equals	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.assign_is_single_equals	check	tokenize("=") first token == TOKEN_ASSIGN	tokenize("=") premier token == TOKEN_ASSIGN
+tokenize.assign_is_single_equals	hint	A lone '=' must produce TOKEN_ASSIGN, not TOKEN_EQ.	Un '=' seul doit produire TOKEN_ASSIGN, pas TOKEN_EQ.
+tokenize.equality_is_double_equals	case	equality is double equals	l'égalité est un double égal
+tokenize.equality_is_double_equals	check	tokenize("==") returns non-NULL	tokenize("==") retourne non-NULL
+tokenize.equality_is_double_equals	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.equality_is_double_equals	check	tokenize("==") first token == TOKEN_EQ	tokenize("==") premier token == TOKEN_EQ
+tokenize.equality_is_double_equals	hint	"==" must produce a single TOKEN_EQ, not two TOKEN_ASSIGN.	"==" doit produire un seul TOKEN_EQ, pas deux TOKEN_ASSIGN.
+tokenize.equality_is_double_equals	check	tokenize("==") produces exactly 2 tokens (TOKEN_EQ + TOKEN_EOF)	tokenize("==") produit exactement 2 tokens (TOKEN_EQ + TOKEN_EOF)
+tokenize.equality_is_double_equals	hint	"==" is one token; receiving 3 means it was split into two TOKEN_ASSIGN.	"==" est un seul token ; recevoir 3 tokens signifie qu'il a été découpé en deux TOKEN_ASSIGN.
+tokenize.two_char_comparison_operators	case	two char comparison operators	opérateurs de comparaison à deux caractères
+tokenize.two_char_comparison_operators	check	two-char operator produces its token type	l'opérateur à deux caractères produit son type de token
+tokenize.two_char_comparison_operators	hint	Two-character operators must be tokenized as a single token.	Les opérateurs à deux caractères doivent être tokenisés comme un seul token.
+tokenize.two_char_comparison_operators	check	two-char operator + EOF = 2 tokens total	opérateur à deux caractères + EOF = 2 tokens au total
+tokenize.two_char_comparison_operators	hint	A two-character operator must produce exactly one token (plus TOKEN_EOF).	Un opérateur à deux caractères doit produire exactement un token (plus TOKEN_EOF).
+tokenize.single_char_comparison_operators	case	single char comparison operators	opérateurs de comparaison d'un seul caractère
+tokenize.single_char_comparison_operators	check	single comparison operator token type	type du token pour opérateur de comparaison d'un seul caractère
+tokenize.single_char_comparison_operators	hint	A lone '<' or '>' must produce TOKEN_LT or TOKEN_GT respectively.	Un '<' ou '>' seul doit produire respectivement TOKEN_LT ou TOKEN_GT.
+tokenize.whitespace_is_skipped	case	whitespace is skipped	les espaces sont ignorés
+tokenize.whitespace_is_skipped	check	tokenize("let x") returns non-NULL	tokenize("let x") retourne non-NULL
+tokenize.whitespace_is_skipped	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.whitespace_is_skipped	check	tokenize("let x") produces 3 tokens	tokenize("let x") produit 3 tokens
+tokenize.whitespace_is_skipped	hint	Whitespace between tokens must be ignored and not produce any token.	Les espaces entre les tokens doivent être ignorés et ne pas produire de token.
+tokenize.line_number_is_tracked_across_newlines	case	line number is tracked across newlines	le numéro de ligne est suivi à travers les sauts de ligne
+tokenize.line_number_is_tracked_across_newlines	check	tokenize("let\nx") returns non-NULL	tokenize("let\nx") retourne non-NULL
+tokenize.line_number_is_tracked_across_newlines	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.line_number_is_tracked_across_newlines	check	TOKEN_LET is on line 1	TOKEN_LET est sur la ligne 1
+tokenize.line_number_is_tracked_across_newlines	hint	Tokens before any newline must have line == 1.	Les tokens avant tout saut de ligne doivent avoir line == 1.
+tokenize.line_number_is_tracked_across_newlines	check	TOKEN_ID after '\n' is on line 2	TOKEN_ID après '\n' est sur la ligne 2
+tokenize.line_number_is_tracked_across_newlines	hint	After consuming a newline, the line counter must have incremented to 2.	Après avoir consommé un saut de ligne, le compteur de ligne doit être passé à 2.
+tokenize.unknown_character_produces_error	case	unknown character produces error	un caractère inconnu produit une erreur
+tokenize.unknown_character_produces_error	check	tokenize("@") returns non-NULL	tokenize("@") retourne non-NULL
+tokenize.unknown_character_produces_error	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.unknown_character_produces_error	check	tokenize("@") first token == TOKEN_ERROR	tokenize("@") premier token == TOKEN_ERROR
+tokenize.unknown_character_produces_error	hint	An unrecognized character must produce TOKEN_ERROR.	Un caractère non reconnu doit produire TOKEN_ERROR.
+tokenize.unterminated_string_produces_error	case	unterminated string produces error	une chaîne non terminée produit une erreur
+tokenize.unterminated_string_produces_error	check	tokenize(unterminated string) returns non-NULL	tokenize(chaîne non terminée) retourne non-NULL
+tokenize.unterminated_string_produces_error	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.unterminated_string_produces_error	check	tokenize("\"hello") first token == TOKEN_ERROR	tokenize("\"hello") premier token == TOKEN_ERROR
+tokenize.unterminated_string_produces_error	hint	A string with no closing '"' must produce TOKEN_ERROR.	Une chaîne sans guillemet fermant doit produire TOKEN_ERROR.
+tokenize.simple_declaration	case	simple declaration	déclaration simple
+tokenize.simple_declaration	check	tokenize("let x = 42;") returns non-NULL	tokenize("let x = 42;") retourne non-NULL
+tokenize.simple_declaration	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.simple_declaration	check	tokenize("let x = 42;") produces 6 tokens	tokenize("let x = 42;") produit 6 tokens
+tokenize.simple_declaration	hint	Expected: TOKEN_LET TOKEN_ID TOKEN_ASSIGN TOKEN_INT TOKEN_SEMICOLON TOKEN_EOF.	Attendu : TOKEN_LET TOKEN_ID TOKEN_ASSIGN TOKEN_INT TOKEN_SEMICOLON TOKEN_EOF.
+tokenize.if_condition_with_equality	case	if condition with equality	condition if avec égalité
+tokenize.if_condition_with_equality	check	tokenize("if (x == 0)") returns non-NULL	tokenize("if (x == 0)") retourne non-NULL
+tokenize.if_condition_with_equality	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.if_condition_with_equality	check	tokenize("if (x == 0)") produces 7 tokens	tokenize("if (x == 0)") produit 7 tokens
+tokenize.if_condition_with_equality	hint	Expected: TOKEN_IF TOKEN_LPAREN TOKEN_ID TOKEN_EQ TOKEN_INT TOKEN_RPAREN TOKEN_EOF.	Attendu : TOKEN_IF TOKEN_LPAREN TOKEN_ID TOKEN_EQ TOKEN_INT TOKEN_RPAREN TOKEN_EOF.
+tokenize.print_string_statement	case	print string statement	instruction print avec chaîne
+tokenize.print_string_statement	check	tokenize("print(\"hello\");") returns non-NULL	tokenize("print(\"hello\");") retourne non-NULL
+tokenize.print_string_statement	hint	tokenize must never return NULL.	tokenize ne doit jamais retourner NULL.
+tokenize.print_string_statement	check	tokenize("print(\"hello\");" ) produces 6 tokens	tokenize("print(\"hello\");" ) produit 6 tokens
+tokenize.print_string_statement	hint	Expected: TOKEN_PRINT TOKEN_LPAREN TOKEN_STRING TOKEN_RPAREN TOKEN_SEMICOLON TOKEN_EOF.	Attendu : TOKEN_PRINT TOKEN_LPAREN TOKEN_STRING TOKEN_RPAREN TOKEN_SEMICOLON TOKEN_EOF.
+tokenize.print_string_statement	check	TOKEN_STRING lexeme == "hello"	lexème TOKEN_STRING == "hello"
+tokenize.print_string_statement	hint	String content must not include the surrounding quotes.	Le contenu d'une chaîne ne doit pas inclure les guillemets.

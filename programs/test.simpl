@@ -1,0 +1,7 @@
+let a = 1;
+if (a > 0) {
+    print("Positive");
+} 
+if (a <= 0) {
+    print("Non-positive");
+}

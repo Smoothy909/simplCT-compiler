@@ -1,0 +1,7 @@
+let x = 42;
+let y = 10;
+
+print("x =", x);
+print("y =", y);
+print("Sum:", x, "+", y, "=", x + y);
+

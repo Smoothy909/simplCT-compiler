@@ -1,0 +1,8 @@
+let n = 493;
+let sum = 0;
+while (n > 0) {
+    let digit = n - (n / 10) * 10;
+    sum = sum + digit;
+    n = n / 10;
+}
+print("Sum of digits of 493 =", sum);

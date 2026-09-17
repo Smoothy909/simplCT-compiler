@@ -1,0 +1,11 @@
+for (let n = 2; n <= 20; n = n + 1) {
+    let is_prime = 1;
+    for (let d = 2; d < n; d = d + 1) {
+        if (n - (n / d) * d == 0) {
+            is_prime = 0;
+        }
+    }
+    if (is_prime == 1) {
+        print(n, "is prime");
+    }
+}

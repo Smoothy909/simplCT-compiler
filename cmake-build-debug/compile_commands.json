@@ -1,0 +1,50 @@
+[
+{
+  "directory": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug",
+  "command": "C:\\Users\\grego\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -IC:/Users/grego/CLionProjects/simplct-compiler/headers -g -std=c11 -fdiagnostics-color=always -Wall -Wextra -o CMakeFiles\\simplct.dir\\main.c.obj -c C:\\Users\\grego\\CLionProjects\\simplct-compiler\\main.c",
+  "file": "C:/Users/grego/CLionProjects/simplct-compiler/main.c",
+  "output": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/simplct.dir/main.c.obj"
+},
+{
+  "directory": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug",
+  "command": "C:\\Users\\grego\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -IC:/Users/grego/CLionProjects/simplct-compiler/headers -g -std=c11 -fdiagnostics-color=always -Wall -Wextra -o CMakeFiles\\simplct.dir\\src\\bytecode.c.obj -c C:\\Users\\grego\\CLionProjects\\simplct-compiler\\src\\bytecode.c",
+  "file": "C:/Users/grego/CLionProjects/simplct-compiler/src/bytecode.c",
+  "output": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/simplct.dir/src/bytecode.c.obj"
+},
+{
+  "directory": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug",
+  "command": "C:\\Users\\grego\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -IC:/Users/grego/CLionProjects/simplct-compiler/headers -g -std=c11 -fdiagnostics-color=always -Wall -Wextra -o CMakeFiles\\simplct.dir\\src\\compiler.c.obj -c C:\\Users\\grego\\CLionProjects\\simplct-compiler\\src\\compiler.c",
+  "file": "C:/Users/grego/CLionProjects/simplct-compiler/src/compiler.c",
+  "output": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/simplct.dir/src/compiler.c.obj"
+},
+{
+  "directory": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug",
+  "command": "C:\\Users\\grego\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -IC:/Users/grego/CLionProjects/simplct-compiler/headers -g -std=c11 -fdiagnostics-color=always -Wall -Wextra -o CMakeFiles\\simplct.dir\\src\\environment.c.obj -c C:\\Users\\grego\\CLionProjects\\simplct-compiler\\src\\environment.c",
+  "file": "C:/Users/grego/CLionProjects/simplct-compiler/src/environment.c",
+  "output": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/simplct.dir/src/environment.c.obj"
+},
+{
+  "directory": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug",
+  "command": "C:\\Users\\grego\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -IC:/Users/grego/CLionProjects/simplct-compiler/headers -g -std=c11 -fdiagnostics-color=always -Wall -Wextra -o CMakeFiles\\simplct.dir\\src\\io_utils.c.obj -c C:\\Users\\grego\\CLionProjects\\simplct-compiler\\src\\io_utils.c",
+  "file": "C:/Users/grego/CLionProjects/simplct-compiler/src/io_utils.c",
+  "output": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/simplct.dir/src/io_utils.c.obj"
+},
+{
+  "directory": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug",
+  "command": "C:\\Users\\grego\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -IC:/Users/grego/CLionProjects/simplct-compiler/headers -g -std=c11 -fdiagnostics-color=always -Wall -Wextra -o CMakeFiles\\simplct.dir\\src\\lexer.c.obj -c C:\\Users\\grego\\CLionProjects\\simplct-compiler\\src\\lexer.c",
+  "file": "C:/Users/grego/CLionProjects/simplct-compiler/src/lexer.c",
+  "output": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/simplct.dir/src/lexer.c.obj"
+},
+{
+  "directory": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug",
+  "command": "C:\\Users\\grego\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -IC:/Users/grego/CLionProjects/simplct-compiler/headers -g -std=c11 -fdiagnostics-color=always -Wall -Wextra -o CMakeFiles\\simplct.dir\\src\\token.c.obj -c C:\\Users\\grego\\CLionProjects\\simplct-compiler\\src\\token.c",
+  "file": "C:/Users/grego/CLionProjects/simplct-compiler/src/token.c",
+  "output": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/simplct.dir/src/token.c.obj"
+},
+{
+  "directory": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug",
+  "command": "C:\\Users\\grego\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -IC:/Users/grego/CLionProjects/simplct-compiler/headers -g -std=c11 -fdiagnostics-color=always -Wall -Wextra -o CMakeFiles\\simplct.dir\\src\\vm.c.obj -c C:\\Users\\grego\\CLionProjects\\simplct-compiler\\src\\vm.c",
+  "file": "C:/Users/grego/CLionProjects/simplct-compiler/src/vm.c",
+  "output": "C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/simplct.dir/src/vm.c.obj"
+}
+]

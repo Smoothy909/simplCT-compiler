@@ -1,0 +1,6 @@
+let score = 850;
+let level = 5;
+
+print("Player: ", "Alice");
+print("Score: ", score);
+print("Level ", level, " completed!");
