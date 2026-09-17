@@ -1,6 +1,0 @@
-C:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/simplct.dir
-C:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/test_compiler.dir
-C:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/test_lexer.dir
-C:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/test.dir
-C:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
