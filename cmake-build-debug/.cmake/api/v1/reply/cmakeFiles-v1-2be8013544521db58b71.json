@@ -1,0 +1,182 @@
+{
+	"globsDependent" : 
+	[
+		{
+			"expression" : "C:/Users/grego/CLionProjects/simplCT-compiler/src/*.c",
+			"listDirectories" : true,
+			"paths" : 
+			[
+				"C:/Users/grego/CLionProjects/simplCT-compiler/src/bytecode.c",
+				"C:/Users/grego/CLionProjects/simplCT-compiler/src/compiler.c",
+				"C:/Users/grego/CLionProjects/simplCT-compiler/src/environment.c",
+				"C:/Users/grego/CLionProjects/simplCT-compiler/src/io_utils.c",
+				"C:/Users/grego/CLionProjects/simplCT-compiler/src/lexer.c",
+				"C:/Users/grego/CLionProjects/simplCT-compiler/src/token.c",
+				"C:/Users/grego/CLionProjects/simplCT-compiler/src/vm.c"
+			]
+		},
+		{
+			"expression" : "C:/Users/grego/CLionProjects/simplCT-compiler/tests/test_*.c",
+			"listDirectories" : true,
+			"paths" : 
+			[
+				"C:/Users/grego/CLionProjects/simplCT-compiler/tests/test_compiler.c",
+				"C:/Users/grego/CLionProjects/simplCT-compiler/tests/test_lexer.c"
+			]
+		}
+	],
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.3.1/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.3.1/CMakeCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.3.1/CMakeRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeRCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C-ABI.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "C:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug",
+		"source" : "C:/Users/grego/CLionProjects/simplCT-compiler"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

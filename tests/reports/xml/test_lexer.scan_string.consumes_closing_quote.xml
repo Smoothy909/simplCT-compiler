@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" name="All">
+<testsuite name="Tests" tests="1">
+<testcase name="scan_string.consumes_closing_quote"><system-out><![CDATA[]]></system-out></testcase>
+</testsuite>
+</testsuites>

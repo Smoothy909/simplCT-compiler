@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target simplct
 
@@ -49,92 +49,76 @@ cmake_ninja_workdir = C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build
 
 build cmake_object_order_depends_target_simplct: phony || .
 
-build CMakeFiles/simplct.dir/main.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplct-compiler/main.c || cmake_object_order_depends_target_simplct
+build CMakeFiles/simplct.dir/main.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/main.c || cmake_object_order_depends_target_simplct
   CONFIG = Debug
   DEP_FILE = CMakeFiles\simplct.dir\main.c.obj.d
   FLAGS = -g -std=c11 -fdiagnostics-color=always -Wall -Wextra
-  INCLUDES = -IC:/Users/grego/CLionProjects/simplct-compiler/headers
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler/headers
   OBJECT_DIR = CMakeFiles\simplct.dir
   OBJECT_FILE_DIR = CMakeFiles\simplct.dir
-  TARGET_COMPILE_PDB = CMakeFiles\simplct.dir\
-  TARGET_PDB = simplct.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\simplct.dir
 
-build CMakeFiles/simplct.dir/src/bytecode.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplct-compiler/src/bytecode.c || cmake_object_order_depends_target_simplct
+build CMakeFiles/simplct.dir/src/bytecode.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/bytecode.c || cmake_object_order_depends_target_simplct
   CONFIG = Debug
   DEP_FILE = CMakeFiles\simplct.dir\src\bytecode.c.obj.d
   FLAGS = -g -std=c11 -fdiagnostics-color=always -Wall -Wextra
-  INCLUDES = -IC:/Users/grego/CLionProjects/simplct-compiler/headers
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler/headers
   OBJECT_DIR = CMakeFiles\simplct.dir
   OBJECT_FILE_DIR = CMakeFiles\simplct.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\simplct.dir\
-  TARGET_PDB = simplct.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\simplct.dir
 
-build CMakeFiles/simplct.dir/src/compiler.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplct-compiler/src/compiler.c || cmake_object_order_depends_target_simplct
+build CMakeFiles/simplct.dir/src/compiler.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/compiler.c || cmake_object_order_depends_target_simplct
   CONFIG = Debug
   DEP_FILE = CMakeFiles\simplct.dir\src\compiler.c.obj.d
   FLAGS = -g -std=c11 -fdiagnostics-color=always -Wall -Wextra
-  INCLUDES = -IC:/Users/grego/CLionProjects/simplct-compiler/headers
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler/headers
   OBJECT_DIR = CMakeFiles\simplct.dir
   OBJECT_FILE_DIR = CMakeFiles\simplct.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\simplct.dir\
-  TARGET_PDB = simplct.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\simplct.dir
 
-build CMakeFiles/simplct.dir/src/environment.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplct-compiler/src/environment.c || cmake_object_order_depends_target_simplct
+build CMakeFiles/simplct.dir/src/environment.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/environment.c || cmake_object_order_depends_target_simplct
   CONFIG = Debug
   DEP_FILE = CMakeFiles\simplct.dir\src\environment.c.obj.d
   FLAGS = -g -std=c11 -fdiagnostics-color=always -Wall -Wextra
-  INCLUDES = -IC:/Users/grego/CLionProjects/simplct-compiler/headers
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler/headers
   OBJECT_DIR = CMakeFiles\simplct.dir
   OBJECT_FILE_DIR = CMakeFiles\simplct.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\simplct.dir\
-  TARGET_PDB = simplct.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\simplct.dir
 
-build CMakeFiles/simplct.dir/src/io_utils.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplct-compiler/src/io_utils.c || cmake_object_order_depends_target_simplct
+build CMakeFiles/simplct.dir/src/io_utils.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/io_utils.c || cmake_object_order_depends_target_simplct
   CONFIG = Debug
   DEP_FILE = CMakeFiles\simplct.dir\src\io_utils.c.obj.d
   FLAGS = -g -std=c11 -fdiagnostics-color=always -Wall -Wextra
-  INCLUDES = -IC:/Users/grego/CLionProjects/simplct-compiler/headers
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler/headers
   OBJECT_DIR = CMakeFiles\simplct.dir
   OBJECT_FILE_DIR = CMakeFiles\simplct.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\simplct.dir\
-  TARGET_PDB = simplct.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\simplct.dir
 
-build CMakeFiles/simplct.dir/src/lexer.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplct-compiler/src/lexer.c || cmake_object_order_depends_target_simplct
+build CMakeFiles/simplct.dir/src/lexer.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/lexer.c || cmake_object_order_depends_target_simplct
   CONFIG = Debug
   DEP_FILE = CMakeFiles\simplct.dir\src\lexer.c.obj.d
   FLAGS = -g -std=c11 -fdiagnostics-color=always -Wall -Wextra
-  INCLUDES = -IC:/Users/grego/CLionProjects/simplct-compiler/headers
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler/headers
   OBJECT_DIR = CMakeFiles\simplct.dir
   OBJECT_FILE_DIR = CMakeFiles\simplct.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\simplct.dir\
-  TARGET_PDB = simplct.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\simplct.dir
 
-build CMakeFiles/simplct.dir/src/token.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplct-compiler/src/token.c || cmake_object_order_depends_target_simplct
+build CMakeFiles/simplct.dir/src/token.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/token.c || cmake_object_order_depends_target_simplct
   CONFIG = Debug
   DEP_FILE = CMakeFiles\simplct.dir\src\token.c.obj.d
   FLAGS = -g -std=c11 -fdiagnostics-color=always -Wall -Wextra
-  INCLUDES = -IC:/Users/grego/CLionProjects/simplct-compiler/headers
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler/headers
   OBJECT_DIR = CMakeFiles\simplct.dir
   OBJECT_FILE_DIR = CMakeFiles\simplct.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\simplct.dir\
-  TARGET_PDB = simplct.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\simplct.dir
 
-build CMakeFiles/simplct.dir/src/vm.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplct-compiler/src/vm.c || cmake_object_order_depends_target_simplct
+build CMakeFiles/simplct.dir/src/vm.c.obj: C_COMPILER__simplct_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/vm.c || cmake_object_order_depends_target_simplct
   CONFIG = Debug
   DEP_FILE = CMakeFiles\simplct.dir\src\vm.c.obj.d
   FLAGS = -g -std=c11 -fdiagnostics-color=always -Wall -Wextra
-  INCLUDES = -IC:/Users/grego/CLionProjects/simplct-compiler/headers
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler/headers
   OBJECT_DIR = CMakeFiles\simplct.dir
   OBJECT_FILE_DIR = CMakeFiles\simplct.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\simplct.dir\
-  TARGET_PDB = simplct.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\simplct.dir
 
 
@@ -152,18 +136,231 @@ build simplct.exe: C_EXECUTABLE_LINKER__simplct_Debug CMakeFiles/simplct.dir/mai
   OBJECT_DIR = CMakeFiles\simplct.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\simplct.dir\
   TARGET_FILE = simplct.exe
   TARGET_IMPLIB = libsimplct.dll.a
-  TARGET_PDB = simplct.pdb
+  TARGET_PDB = simplct.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\simplct.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_compiler
+
+
+#############################################
+# Order-only phony target for test_compiler
+
+build cmake_object_order_depends_target_test_compiler: phony || .
+
+build CMakeFiles/test_compiler.dir/tests/test_compiler.c.obj: C_COMPILER__test_compiler_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/tests/test_compiler.c || cmake_object_order_depends_target_test_compiler
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_compiler.dir\tests\test_compiler.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_compiler.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\test_compiler.dir
+
+build CMakeFiles/test_compiler.dir/src/bytecode.c.obj: C_COMPILER__test_compiler_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/bytecode.c || cmake_object_order_depends_target_test_compiler
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_compiler.dir\src\bytecode.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_compiler.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_compiler.dir
+
+build CMakeFiles/test_compiler.dir/src/compiler.c.obj: C_COMPILER__test_compiler_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/compiler.c || cmake_object_order_depends_target_test_compiler
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_compiler.dir\src\compiler.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_compiler.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_compiler.dir
+
+build CMakeFiles/test_compiler.dir/src/environment.c.obj: C_COMPILER__test_compiler_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/environment.c || cmake_object_order_depends_target_test_compiler
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_compiler.dir\src\environment.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_compiler.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_compiler.dir
+
+build CMakeFiles/test_compiler.dir/src/io_utils.c.obj: C_COMPILER__test_compiler_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/io_utils.c || cmake_object_order_depends_target_test_compiler
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_compiler.dir\src\io_utils.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_compiler.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_compiler.dir
+
+build CMakeFiles/test_compiler.dir/src/lexer.c.obj: C_COMPILER__test_compiler_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/lexer.c || cmake_object_order_depends_target_test_compiler
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_compiler.dir\src\lexer.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_compiler.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_compiler.dir
+
+build CMakeFiles/test_compiler.dir/src/token.c.obj: C_COMPILER__test_compiler_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/token.c || cmake_object_order_depends_target_test_compiler
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_compiler.dir\src\token.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_compiler.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_compiler.dir
+
+build CMakeFiles/test_compiler.dir/src/vm.c.obj: C_COMPILER__test_compiler_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/vm.c || cmake_object_order_depends_target_test_compiler
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_compiler.dir\src\vm.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_compiler.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_compiler.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_compiler.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_compiler
+
+
+#############################################
+# Link the executable test_compiler.exe
+
+build test_compiler.exe: C_EXECUTABLE_LINKER__test_compiler_Debug CMakeFiles/test_compiler.dir/tests/test_compiler.c.obj CMakeFiles/test_compiler.dir/src/bytecode.c.obj CMakeFiles/test_compiler.dir/src/compiler.c.obj CMakeFiles/test_compiler.dir/src/environment.c.obj CMakeFiles/test_compiler.dir/src/io_utils.c.obj CMakeFiles/test_compiler.dir/src/lexer.c.obj CMakeFiles/test_compiler.dir/src/token.c.obj CMakeFiles/test_compiler.dir/src/vm.c.obj
+  CONFIG = Debug
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\test_compiler.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = test_compiler.exe
+  TARGET_IMPLIB = libtest_compiler.dll.a
+  TARGET_PDB = test_compiler.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\test_compiler.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_lexer
+
+
+#############################################
+# Order-only phony target for test_lexer
+
+build cmake_object_order_depends_target_test_lexer: phony || .
+
+build CMakeFiles/test_lexer.dir/tests/test_lexer.c.obj: C_COMPILER__test_lexer_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/tests/test_lexer.c || cmake_object_order_depends_target_test_lexer
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_lexer.dir\tests\test_lexer.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_lexer.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_lexer.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\test_lexer.dir
+
+build CMakeFiles/test_lexer.dir/src/bytecode.c.obj: C_COMPILER__test_lexer_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/bytecode.c || cmake_object_order_depends_target_test_lexer
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_lexer.dir\src\bytecode.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_lexer.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_lexer.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_lexer.dir
+
+build CMakeFiles/test_lexer.dir/src/compiler.c.obj: C_COMPILER__test_lexer_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/compiler.c || cmake_object_order_depends_target_test_lexer
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_lexer.dir\src\compiler.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_lexer.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_lexer.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_lexer.dir
+
+build CMakeFiles/test_lexer.dir/src/environment.c.obj: C_COMPILER__test_lexer_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/environment.c || cmake_object_order_depends_target_test_lexer
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_lexer.dir\src\environment.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_lexer.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_lexer.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_lexer.dir
+
+build CMakeFiles/test_lexer.dir/src/io_utils.c.obj: C_COMPILER__test_lexer_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/io_utils.c || cmake_object_order_depends_target_test_lexer
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_lexer.dir\src\io_utils.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_lexer.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_lexer.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_lexer.dir
+
+build CMakeFiles/test_lexer.dir/src/lexer.c.obj: C_COMPILER__test_lexer_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/lexer.c || cmake_object_order_depends_target_test_lexer
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_lexer.dir\src\lexer.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_lexer.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_lexer.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_lexer.dir
+
+build CMakeFiles/test_lexer.dir/src/token.c.obj: C_COMPILER__test_lexer_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/token.c || cmake_object_order_depends_target_test_lexer
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_lexer.dir\src\token.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_lexer.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_lexer.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_lexer.dir
+
+build CMakeFiles/test_lexer.dir/src/vm.c.obj: C_COMPILER__test_lexer_unscanned_Debug C$:/Users/grego/CLionProjects/simplCT-compiler/src/vm.c || cmake_object_order_depends_target_test_lexer
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\test_lexer.dir\src\vm.c.obj.d
+  FLAGS = -g -std=c11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/grego/CLionProjects/simplCT-compiler -IC:/Users/grego/CLionProjects/simplCT-compiler/tests
+  OBJECT_DIR = CMakeFiles\test_lexer.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_lexer.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\test_lexer.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_lexer
+
+
+#############################################
+# Link the executable test_lexer.exe
+
+build test_lexer.exe: C_EXECUTABLE_LINKER__test_lexer_Debug CMakeFiles/test_lexer.dir/tests/test_lexer.c.obj CMakeFiles/test_lexer.dir/src/bytecode.c.obj CMakeFiles/test_lexer.dir/src/compiler.c.obj CMakeFiles/test_lexer.dir/src/environment.c.obj CMakeFiles/test_lexer.dir/src/io_utils.c.obj CMakeFiles/test_lexer.dir/src/lexer.c.obj CMakeFiles/test_lexer.dir/src/token.c.obj CMakeFiles/test_lexer.dir/src/vm.c.obj
+  CONFIG = Debug
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\test_lexer.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = test_lexer.exe
+  TARGET_IMPLIB = libtest_lexer.dll.a
+  TARGET_PDB = test_lexer.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\test_lexer.dir
+
+
+#############################################
+# Utility command for test
+
+build CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\grego\CLionProjects\simplCT-compiler\cmake-build-debug && C:\Users\grego\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\ctest.exe "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test: phony CMakeFiles/test.util
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\grego\CLionProjects\simplct-compiler\cmake-build-debug && C:\Users\grego\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\grego\CLionProjects\simplCT-compiler\cmake-build-debug && C:\Users\grego\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -174,7 +371,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\grego\CLionProjects\simplct-compiler\cmake-build-debug && C:\Users\grego\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\grego\CLionProjects\simplct-compiler -BC:\Users\grego\CLionProjects\simplct-compiler\cmake-build-debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\grego\CLionProjects\simplCT-compiler\cmake-build-debug && C:\Users\grego\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\grego\CLionProjects\simplCT-compiler -BC:\Users\grego\CLionProjects\simplCT-compiler\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -186,15 +383,19 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build simplct: phony simplct.exe
 
+build test_compiler: phony test_compiler.exe
+
+build test_lexer: phony test_lexer.exe
+
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug
+# Folder: C:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug
 
-build all: phony simplct.exe
+build all: phony simplct.exe test_compiler.exe test_lexer.exe
 
 # =============================================================================
 # Built-in targets
@@ -203,13 +404,13 @@ build all: phony simplct.exe
 #############################################
 # Phony target to force glob verification run.
 
-build C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake_force: phony
+build C$:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake_force: phony
 
 
 #############################################
 # Re-run CMake to check if globbed directories changed.
 
-build C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake_force
+build C$:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | C$:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake_force
   pool = console
   restat = 1
 
@@ -217,14 +418,14 @@ build C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFile
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/cmake_install.cmake: RERUN_CMAKE C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/cmake.verify_globs | C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCCompilerABI.c C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeRCCompiler.cmake.in C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeRCInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystem.cmake.in C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeTestRCCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeInspectCLinker.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake C$:/Users/grego/CLionProjects/simplct-compiler/CMakeLists.txt CMakeCache.txt CMakeFiles/4.3.1/CMakeCCompiler.cmake CMakeFiles/4.3.1/CMakeRCCompiler.cmake CMakeFiles/4.3.1/CMakeSystem.cmake
+build build.ninja C$:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/cmake_install.cmake C$:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CTestTestfile.cmake: RERUN_CMAKE C$:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/cmake.verify_globs | C$:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeRCInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake C$:/Users/grego/CLionProjects/simplCT-compiler/CMakeLists.txt CMakeCache.txt CMakeFiles/4.3.1/CMakeCCompiler.cmake CMakeFiles/4.3.1/CMakeRCCompiler.cmake CMakeFiles/4.3.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/grego/CLionProjects/simplct-compiler/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCCompiler.cmake.in C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCCompilerABI.c C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeRCCompiler.cmake.in C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeRCInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystem.cmake.in C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeTestRCCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeInspectCLinker.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake C$:/Users/grego/CLionProjects/simplct-compiler/CMakeLists.txt CMakeCache.txt CMakeFiles/4.3.1/CMakeCCompiler.cmake CMakeFiles/4.3.1/CMakeRCCompiler.cmake CMakeFiles/4.3.1/CMakeSystem.cmake: phony
+build C$:/Users/grego/CLionProjects/simplCT-compiler/cmake-build-debug/CMakeFiles/VerifyGlobs.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeRCInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Compiler/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Linker/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU-C.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/Windows.cmake C$:/Users/grego/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake C$:/Users/grego/CLionProjects/simplCT-compiler/CMakeLists.txt CMakeCache.txt CMakeFiles/4.3.1/CMakeCCompiler.cmake CMakeFiles/4.3.1/CMakeRCCompiler.cmake CMakeFiles/4.3.1/CMakeSystem.cmake: phony
 
 
 #############################################
