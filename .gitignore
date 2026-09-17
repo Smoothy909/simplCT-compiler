@@ -1,0 +1,51 @@
+# Build directories and generated artifacts
+/build/
+/builds/
+/cmake-build-*/
+/bin/
+/obj/
+/out/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+
+# Compiled binaries and object files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Debug / profiling outputs
+*.log
+*.tmp
+*.cache
+*.out
+
+# IDE / editor files
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Local test reports and generated data
+/tests/reports/
+/tests/**/*.xml
+/tests/**/*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Local environment overrides
+.env
+.env.*
