@@ -1,44 +1,110 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/d8U1gygT)
+# simplCT
 
-# <span style="color:#FF5A5A">Project simplCT [EN]</span>
+<div align="center">
+  <img src="https://img.shields.io/badge/C-11-0F172A?style=flat-square&logo=c&logoColor=white" alt="C" />
+  <img src="https://img.shields.io/badge/bytecode-compiler-334155?style=flat-square" alt="Compiler" />
+  <img src="https://img.shields.io/badge/VM-runtime-475569?style=flat-square" alt="VM" />
+</div>
 
-This repository is the base for the simplCT compilation project.
+<p align="center">
+  <strong>A compact compiler project written in C</strong><br>
+  from source parsing to bytecode execution.
+</p>
 
-## <span style="color:#FF8B5A">Team members</span>
-- `Gabrielle Deininger` (< gabrielle-efr >)
-- `Gregoire D'argent` (< Smoothy909 >)
-- Group: `P1 INT1`
+SimplCT is a small but complete compiler pipeline built in C. It reads a custom imperative language, tokenizes the source, compiles expressions and statements into bytecode, and executes the result with a lightweight virtual machine.
 
-## <span style="color:#FF8B5A">lexer.c functions</span>
-10/04/2026
+## Overview
 
-### <span style="color:#FFA95A">1. work repartitions</span>
-- Gabrielle Deininger : `tokenize`, `scan_string`, `README.md`
-- Gregoire D'argent : `scan_identifier`, `scan_number`, `check_keyword`, `advance_pos`, `peek_next_char`
+The project demonstrates the main stages of a compiler:
 
-### <span style="color:#FFD45A">2. Difficulties encountered</span>
-- one bug corrected in `scan_string`: forgot to verify if quotes were closed before the end of the file
-- improvement thanks to AI: pointed out the missing `/0` termination check, which we then implemented
+- Lexical analysis: tokenization of source code
+- Compilation: generation of bytecode from statements and expressions
+- Runtime execution: evaluation in a virtual machine
+- Sample programs: examples covering arithmetic, conditions, loops, and strings
 
-## <span style="color:#FF8B5A">compiler.c functions</span>
-10/05/2026
+This repository is intentionally educational and designed to keep the compilation pipeline clear and readable.
 
-### <span style="color:#FFA95A">1. work repartitions</span>
-- Gabrielle Deininger : `compile_primary`, `compile_factor`, `compile_term`, `README.md`,`compile_let_statement`, `compile_print_statement`, `compile_if_statement`
-- Gregoire D'argent : `compile_comparison`, `compile_equality`, `compile_expression`,`compile_while_statement`, `compile_for_statement`,`compile_block`,`compile_statement`,`compile`
+## Architecture
 
-### <span style="color:#FFD45A">2. Difficulties encountered</span>
-- big difficulties with git : issues encountered while trying to merge and access part 2
-- bug in let compiler and primary compiler
+The codebase follows a classic compiler pipeline:
 
-## <span style="color:#FF8B5A">main.c and programs</span>
-24/05/2026
+- `src/lexer.c` — tokenizes source code
+- `src/compiler.c` — compiles expressions and statements into bytecode
+- `src/vm.c` — executes bytecode in a virtual machine
+- `src/environment.c` — stores runtime variables
+- `src/io_utils.c` — reads source files from disk
+- `headers/` — shared type definitions and interfaces
 
-### <span style="color:#FFA95A">1. work repartitions</span>
-- Gabrielle Deininger : `main.c` (interactive menu), `io_utils.c`, `fibonacci.simpl`, `gcd.simpl`, `README.md`
-- Gregoire D'argent : `main.c`, `primes.simpl`, `digit-sum.simpl`
+The execution flow is:
 
-### <span style="color:#FFD45A">2. Difficulties encountered</span>
-- **Memory bug in `io_utils.c`**: On Windows, the file reader was capturing "garbage data" (like `LE_SYSMAN=`) from the system memory at the end of the source code. This caused "Primary expression expected" errors during the compilation of the very last line.
-- **Resolution with AI assistance**: The issue was linked to the way Windows handles line breaks (`\r\n`). Following AI advice, we opened files in binary mode (`"rb"`) and used the return value of `fread` to manually set the null-terminator (`\0`) at the exact end of the buffer.
-- **Pathing issues**: Solved "File not found" errors in CLion by using relative paths (`../programs/`) to correctly point to the source files from the build directory.
+`source program -> tokens -> bytecode -> runtime environment`
+
+## Supported language features
+
+The implemented language includes:
+
+- variable declarations with `let`
+- arithmetic operators: `+`, `-`, `*`, `/`
+- comparisons: `<`, `>`, `<=`, `>=`, `==`, `!=`
+- conditional statements: `if (...) { ... }`
+- loops: `while (...) { ... }` and `for (...) { ... }`
+- output: `print(...)`
+- string literals and basic string handling
+
+## Project structure
+
+- `main.c` — interactive launcher for sample programs
+- `programs/` — example `.simpl` source files
+- `src/` — compiler, lexer, VM, and runtime logic
+- `headers/` — public declarations and core structures
+- `tests/` — validation and reporting tools
+- `CMakeLists.txt` — build configuration
+
+## Build
+
+The project uses CMake.
+
+```bash
+cmake -S . -B build
+cmake --build build
+```
+
+This produces the `simplct` executable.
+
+## Run
+
+From the build directory:
+
+```bash
+./simplct
+```
+
+The application opens an interactive menu listing the available sample programs. Each selected file is read, tokenized, compiled, and executed.
+
+## Example
+
+```simpl
+let x = 10;
+let y = 5;
+let result = x + y;
+print(result);
+```
+
+This source is parsed, compiled, and then evaluated by the VM.
+
+## Validation
+
+Optional validation tests can be enabled with CMake:
+
+```bash
+cmake -S . -B build -DENABLE_VALIDATION_TESTS=ON
+ctest --test-dir build --output-on-failure
+```
+
+## Notes
+
+This project is designed to be readable and instructional. It prioritizes clarity and educational value over industrial compiler complexity, making it suitable for understanding how a compiler pipeline works from tokenization to runtime execution.
+
+## License
+
+This repository is provided as a project for learning and experimentation. See the repository contents for any additional usage constraints if applicable.
